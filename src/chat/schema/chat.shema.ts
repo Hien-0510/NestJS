@@ -6,6 +6,8 @@ export type ChatDocument = HydratedDocument<Chat>;
 @Schema()
 export class Chat{
     @Prop()
+    id: string;
+    @Prop()
     name: string;
     @Prop()
     content: string;

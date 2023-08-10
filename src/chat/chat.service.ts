@@ -14,7 +14,7 @@ export class ChatService {
     createChatDto.updateAt = new Date();
     return this.chatModel.create(createChatDto);
   }
-getAll() {
+  getAll() {
     return this.chatModel.find();
   }
 
@@ -22,7 +22,7 @@ getAll() {
   getOne(id: string) {
     return this.chatModel.findOne({id: id});
   }
-//đã xong
+  //đã xong
   update(id: string, updateChatDto: UpdateChatDto) {
     updateChatDto.updateAt = new Date();
     return this.chatModel.findOneAndUpdate({id: id}, updateChatDto)

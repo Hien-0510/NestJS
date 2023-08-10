@@ -7,13 +7,13 @@ import { UpdateChatDto } from './dto/update-chat.dto';
 export class ChatController {
   constructor(private readonly chatService: ChatService) {}
 
-  @Post()
+  @Post('/send')
   create(@Body() createChatDto: CreateChatDto) {
     return this.chatService.create(createChatDto);
   }
 
-  @Get()
-  findAll() {
+  @Get('/getAll')
+  getAll() {
     return this.chatService.getAll();
   }
 
