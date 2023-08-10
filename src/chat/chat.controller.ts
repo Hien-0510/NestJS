@@ -14,21 +14,21 @@ export class ChatController {
 
   @Get()
   findAll() {
-    return this.chatService.findAll();
+    return this.chatService.getAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.chatService.findOne(+id);
+    return this.chatService.getOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateChatDto: UpdateChatDto) {
-    return this.chatService.update(+id, updateChatDto);
+    return this.chatService.update(id, updateChatDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.chatService.remove(+id);
+    return this.chatService.remove(id);
   }
 }
