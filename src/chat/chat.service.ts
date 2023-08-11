@@ -18,6 +18,10 @@ export class ChatService {
     return this.chatModel.find();
   }
 
+  GetAllById(roomId: string) {
+    return this.chatModel.find({roomId: roomId});
+  }
+
   //đã xong
   getOne(id: string) {
     return this.chatModel.findOne({id: id});

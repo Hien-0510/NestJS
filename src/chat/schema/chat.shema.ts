@@ -10,6 +10,8 @@ export class Chat{
     @Prop()
     name: string;
     @Prop()
+    roomId:string;
+    @Prop()
     content: string;
     @Prop()
     sender: string;

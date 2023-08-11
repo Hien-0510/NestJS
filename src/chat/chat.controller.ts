@@ -18,6 +18,11 @@ export class ChatController {
   }
 
   @Get(':id')
+  getAllById(@Param('id') roomId: string) {
+    return this.chatService.GetAllById(roomId).exec();
+  }
+
+  @Get(':id')
   findOne(@Param('id') id: string) {
     return this.chatService.getOne(id);
   }
